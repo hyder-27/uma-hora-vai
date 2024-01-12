@@ -1,0 +1,703 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Readex+Pro:wght@500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+}
+:root {
+  --azul-p1: #045aa8;
+  --azul-p2: #017ad3;
+  --azul-p3: #30acea;
+  --azul-p4: #54dafd;
+
+  --branco: #f5f5f5;
+  --preto: #212121;
+}
+h1,
+h2,
+h3 {
+  font-family: "Readex Pro";
+}
+p {
+  color: var(--black);
+}
+
+header {
+  width: 100%;
+  background-color: var(--azul-p3);
+  padding: 18px 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+}
+header #contacts {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header #contacts a {
+  position: relative;
+}
+header #contacts a > span > span::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  background-color: var(--branco);
+  transition: 300ms all ease;
+}
+header #contacts a:hover > span > span::after {
+  width: 100%;
+}
+header #contacts .number {
+  display: flex;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  width: fit-content;
+}
+header #contacts .number > span {
+  font-size: 1.3rem;
+  color: white;
+}
+header .btn-contate-nos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 18px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1.6rem;
+  text-align: center;
+  transition: 200ms all linear;
+}
+header .btn-contate-nos:hover {
+  background-color: var(--branco);
+  color: var(--azul-p2);
+}
+
+main section#intro {
+  padding: 120px 90px 50px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section#intro #intro-content {
+  width: 50vw;
+}
+main section#intro #intro-content #welcome {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--azul-p1);
+  margin-bottom: 8px;
+}
+main section#intro #intro-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--azul-p1);
+  line-height: 120%;
+  margin-bottom: 4px;
+}
+main section#intro #intro-content #about {
+  display: block;
+  font-size: 1.5rem;
+  color: #30cccc;
+  margin-bottom: 16px;
+}
+main section#intro #intro-content p {
+  font-size: 1.1rem;
+  line-height: 150%;
+  margin-bottom: 22px;
+}
+main section#intro #intro-content .btn-quero-saber-mais {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  border: 1px solid var(--preto);
+  color: var(--preto);
+  width: fit-content;
+}
+main section#intro #intro-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section#intro #intro-image > img {
+  width: 36vw;
+}
+
+main section#services {
+  background-color: var(--azul-p1);
+  padding: 20px 90px;
+  color: var(--branco);
+}
+main section#services h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  text-align: center;
+}
+main section#services .slider {
+  display: flex;
+  grid-gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x;
+  /* gap: 24px; */
+  border-radius: 14px;
+  cursor: grab;
+  scroll-behavior: smooth;
+  padding-bottom: 24px;
+}
+main section#services .slider::-webkit-scrollbar {
+  display: none;
+}
+main section#services .slider .service {
+  scroll-snap-align: start;
+  min-width: 360px;
+  height: 434px;
+  background-color: var(--branco);
+  background-position: top center;
+  background-repeat: no-repeat;
+  border-radius: 14px;
+  position: relative;
+}
+main section#services .slider .service .service-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  position: absolute;
+  width: 262px;
+  max-height: 118px;
+  bottom: 12px;
+  left: 50%;
+  /* margin: auto; */
+  transform: translateX(-50%);
+  user-select: none;
+}
+main section#services .slider .service .service-name strong {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 140%;
+  color: var(--azul-p1);
+}
+main section#services .slider .service#geladeira {
+  background-image: url("images/slider-images/conserto-de-geladeira_freezer.jpg");
+}
+main section#services .slider .service#ar-condicionado-1 {
+  background-image: url("images/slider-images/instalacao-de-ar-condicionado.jpg");
+}
+main section#services .slider .service#ar-condicionado-2 {
+  background-image: url("images/slider-images/manutencao-de-ar-condicionado.jpg");
+}
+main section#services .slider .service#maquina {
+  background-image: url("images/slider-images/conserto-de-maquina-de-lavar_roupas.jpg");
+}
+main section#services .slider .service#micro-ondas {
+  background-image: url("images/slider-images/conserto-de-micro-ondas.jpg");
+}
+main section#services .slider .service#coifa {
+  background-image: url("images/slider-images/conserto-limpeza-e-secagem-de-coifa.jpg");
+}
+main section#services .slider .service#secadora {
+  background-image: url("images/slider-images/conserto-de-secadora-de-roupas.jpg");
+}
+.btn-contato {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  width: fit-content;
+  color: var(--azul-p1);
+  background-color: var(--branco);
+  border-radius: 8px;
+  margin: auto;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: 2px solid var(--branco);
+  transition: 200ms all linear;
+}
+.btn-contato:hover {
+  background-color: var(--azul-p1);
+  color: var(--branco);
+  /* border: 2px solid var(--branco); */
+}
+main section#service-points {
+  background-color: white;
+  padding: 34px 90px;
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  place-items: center;
+}
+main section#service-points #content {
+  display: flex;
+  flex-direction: column;
+}
+main section#service-points #content .btn-contato:hover {
+  border-color: var(--azul-p2);
+  background-color: white;
+  color: var(--azul-p2);
+}
+main section#service-points #content > span > img {
+  width: 5rem;
+  margin-bottom: 10px;
+}
+main section#service-points #content h2 {
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 117%;
+  text-transform: uppercase;
+  color: #33cccc;
+  margin-bottom: 16px;
+}
+main section#service-points #content h2 > span {
+  font-weight: 700;
+  color: var(--azul-p1);
+}
+main section#service-points #content p {
+  font-size: 1.2rem;
+  line-height: 144%;
+  margin-bottom: 40px;
+  max-width: 540px;
+}
+main section#service-points #content .btn-contato {
+  margin: inherit;
+  background-color: var(--azul-p2);
+  color: var(--branco);
+}
+main section#service-points #image > picture > img {
+  width: 34vw;
+}
+
+main section#marcas {
+  background-color: var(--azul-p2);
+  color: var(--branco);
+  padding: 32px 0;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+main section#marcas h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+main section#marcas .container-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  grid-gap: 20px;
+  max-width: 70vw;
+  margin: 0 auto;
+}
+main section#marcas p {
+  max-width: 70vw;
+  font-size: 1.6rem;
+  line-height: 140%;
+  text-align: center;
+  color: var(--branco);
+  margin: auto;
+  margin-top: 40px;
+}
+main section#marcas p > span {
+  font-weight: 700;
+}
+footer {
+  display: flex;
+  color: var(--preto);
+  position: relative;
+}
+footer #columns-wrapper {
+  display: flex;
+}
+footer .column {
+  padding-top: 70px;
+}
+footer .column#logo-footer {
+  margin-right: 64px;
+  padding-left: 80px;
+}
+footer .column#contacts-2 .column-title {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+footer .column#contacts-2 ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-left: 34px;
+}
+footer .column#contacts-2 ul li {
+  font-size: 1.1rem;
+  position: relative;
+}
+footer .column#contacts-2 ul li::before {
+  content: url("icons/black-whatsapp.svg");
+  display: block;
+  position: absolute;
+  left: -38px;
+  top: -4px;
+}
+footer .column#contacts-2 ul > a {
+  color: var(--preto);
+}
+footer .column#contacts-2 ul li#instagram > span {
+  text-decoration: underline;
+}
+footer .column#contacts-2 ul li#instagram::before {
+  content: url("icons/black-instagram.svg");
+  left: -33px;
+  top: 0;
+}
+footer .column#contacts-2 ul li > strong {
+  font-weight: 600;
+}
+footer .column#whatsapp {
+  padding-left: 32px;
+  padding-bottom: 40px;
+  padding-right: 70px;
+  background-color: #35ff35;
+  position: absolute;
+  right: 0;
+}
+footer .column#whatsapp .column-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  line-height: 108%;
+}
+footer .column#whatsapp .column-title span {
+  color: rgba(255, 255, 255, 0);
+  -webkit-text-stroke: 1px white;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+footer .column#whatsapp form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 28px;
+  padding-bottom: 22px;
+}
+footer .column#whatsapp form input[type="tel"] {
+  width: 214px;
+  height: 50px;
+  padding: 16px 9px;
+  border: 1px solid black;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--preto);
+  outline: none;
+}
+footer .column#whatsapp form input[type="tel"]::placeholder {
+  color: var(--preto);
+}
+footer .column#whatsapp form .btn-whatsapp {
+  width: 153px;
+  height: 50px;
+  padding: 16px 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #008169;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+}
+footer .column#whatsapp p {
+  font-size: 1rem;
+  max-width: 253px;
+  color: white;
+}
+footer .column#whatsapp p > span > img {
+  width: 1.2rem;
+}
+
+footer .column#whatsapp::before {
+  content: "";
+  display: block;
+  /* background-image: url("/images/whatsapp-background.png"); */
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* 
+
+
+
+*/
+
+@media screen and (max-width: 1210px) {
+  header #contacts {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  main section#intro {
+    padding: 180px 74px 50px;
+  }
+
+  footer #columns-wrapper {
+    flex-direction: column;
+  }
+  footer .column#logo-footer {
+    margin-right: 0;
+    padding-left: 40px;
+  }
+  footer .column#contacts-2 {
+    padding-left: 40px;
+  }
+  footer .column#whatsapp {
+    height: 106%;
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  html {
+    font-size: 93%;
+  }
+
+  main section#marcas .container-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 976px) {
+  html {
+    font-size: 85%;
+  }
+  header #contacts {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  footer .column#whatsapp .column-title span {
+    color: white;
+    -webkit-text-stroke: 0px;
+  }
+  footer .column#whatsapp form {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --azul-p1: #0485ce;
+    --azul-p2: #017ad3;
+    --azul-p3: #30acea;
+    --azul-p4: #33cccc;
+  }
+
+  html {
+    font-size: 80%;
+  }
+  main section#intro {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 120px 4em 60px;
+  }
+  main section#intro #intro-content {
+    width: auto;
+  }
+  main section#intro #intro-content #about {
+    margin-bottom: 6px;
+  }
+  main section#intro #intro-content p {
+    text-align: left;
+  }
+
+  main section#services h2 {
+    margin-bottom: 20px;
+  }
+  main section#services .slider .service {
+    height: 360px;
+  }
+  main section#services .slider .service .service-name {
+    width: 100%;
+    height: 114px;
+    /* padding-top: 10px; */
+    padding: 12px 18px 0;
+    background-color: white;
+  }
+
+  main section#service-points {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  main section#service-points #image > picture > img {
+    width: 40vw;
+  }
+  main section#service-points #content {
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  main section#service-points #content p {
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+  main section#service-points #content > span {
+    display: none;
+  }
+}
+/* MOBILE */
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 70%;
+  }
+  header {
+    padding: 30px 32px;
+  }
+  header > a > #white-logo img {
+    height: 50px;
+  }
+
+  main section#intro {
+    padding: 120px 32px 60px;
+  }
+
+  .btn-contato {
+    padding: 10px;
+  }
+
+  main section#services {
+    padding: 40px 30px 30px;
+  }
+  main section#services .slider .service {
+    height: 300px;
+    min-width: 280px;
+    background-size: contain;
+  }
+  main section#services .slider .service .service-name {
+    bottom: 10px;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+  }
+
+  main section#marcas .container-images {
+    width: 80%;
+  }
+  main section#marcas .container-images img {
+    width: 70vw;
+  }
+  main section#marcas .container-images img#lg {
+    width: 40vw;
+  }
+  main section#marcas .container-images img#fujitsu {
+    width: 46vw;
+  }
+
+  footer #columns-wrapper {
+    flex-direction: row;
+  }
+
+  footer .column#whatsapp {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 23px 0 96px;
+    background-color: #008169;
+    background-image: url("images/whatsapp-background.png");
+    position: absolute;
+    bottom: -340px;
+  }
+  footer .column#whatsapp .column-title {
+    font-size: 2.2rem;
+  }
+  footer .column#whatsapp .column-title span {
+    letter-spacing: normal;
+    color: #35ff35;
+  }
+  footer .column#contacts-2 .column-title {
+    margin-bottom: 20px;
+  }
+  footer .column#contacts-2 ul {
+    padding-left: 26px;
+  }
+  footer .column#contacts-2 ul li::before {
+    content: url("icons/black-whatsapp-16px.svg");
+    left: -24px;
+    top: 2px;
+  }
+  footer .column#contacts-2 ul li#instagram::before {
+    content: url("icons/black-instagram-16px.svg");
+    left: -25px;
+    top: 1px;
+  }
+  footer .column#whatsapp form {
+    flex-direction: row;
+    gap: 9px;
+  }
+  footer .column#whatsapp form input[type="tel"] {
+    width: 184px;
+    height: 50px;
+    padding: 13px 7px;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 1.2rem;
+  }
+  footer .column#whatsapp form .btn-whatsapp {
+    width: 130px;
+    height: 50px;
+    padding: 0;
+    font-size: 1.2rem;
+    background-color: #6fff97;
+    border: 1px solid black;
+    color: #008169;
+  }
+  footer .column#whatsapp p {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  html {
+    font-size: 65%;
+  }
+
+  header > a > #white-logo img {
+    height: 40px;
+  }
+  header .btn-contate-nos {
+    padding: 12px 10px;
+  }
+  main section#intro #intro-image > img {
+    width: 54vw;
+  }
+  main section#service-points {
+    padding: 26px 32px;
+  }
+  main section#service-points #image > picture > img {
+    width: 60vw;
+  }
+
+  footer .column#logo-footer > img {
+    height: 40px;
+  }
+}
